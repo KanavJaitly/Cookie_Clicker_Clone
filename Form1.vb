@@ -1,7 +1,9 @@
-﻿Public Class CookieClicker
+﻿Imports System.Net
+
+Public Class CookieClicker
     'global variable
     Public totalCookies, ClickValue, ClickLevel As Integer
-    Public PassiveOneVal, PassiveOneLevel As Integer
+    Public PassiveOneVal, PassiveOneLevel, c As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         totalCookies = 0
         ClickValue = 1
@@ -72,5 +74,14 @@
             lbl_Passive_One_Level.Text = "LvL: " + PassiveOneLevel.ToString
             lbl_Passive_One_Upgrade_Cost.Text = "Price: " + upgradeCost.ToString
         End If
+    End Sub
+
+    Private Sub RoundButton1_Click(sender As Object, e As EventArgs) Handles RoundButton1.Click
+        cookie_click()
+    End Sub
+
+    Private Sub Cookie_Boost_Click(sender As Object, e As EventArgs) Handles Cookie_Boost.Click
+        set_Timer(1000)
+        'Githubtest
     End Sub
 End Class
